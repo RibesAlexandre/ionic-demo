@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import {IonicPage, NavController, ViewController} from 'ionic-angular';
 import {TabOnePage} from "../tab-one/tab-one";
 import {TabTwoPage} from "../tab-two/tab-two";
 import {TabThreePage} from "../tab-three/tab-three";
@@ -23,6 +23,10 @@ export class ModalTabsPage {
   tabThreeRoot = TabThreePage
 
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController, public viewCtrl: ViewController) {}
 
+
+  closeArticle() {
+    this.viewCtrl.dismiss();
+  }
 }
